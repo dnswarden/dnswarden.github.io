@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dnswarden — Secure and configurable dns</title>
+  <meta name="title" content="dnswarden — secure and configurable dns" />
+  <meta name="description"
+    content="Your one stop dns resolver for safer internet. Lets you configure to block/allow websites or domains through pre-defined blocklists and whitelists. " />
+  <meta name="keywords"
+    content="dnssec,adblock,dns,resolver,dot,doh,dns-over-https,dns-over-tls,no-logs,nologs,adulfilter,adult-filter,uncensored,opennic,adblocking,no-logging,customfilter,custom-filter,DNSCrypt,dnscrypt-proxy" />
+  <meta name="robots" content="index, follow" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+  <link rel="manifest" href="img/site.webmanifest" />
+  <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#ffc40d" />
+  <meta name="msapplication-config" content="img/browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff" />
+  <link href="./css/main.css" rel="stylesheet" />
+  
+</head>
+
+<body class="indexpage" id="top">
+  <header>
+    <div data-theme="cmyk" class="navbar bg-base-300 font-semibold">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52">
+            <li><a href="#he-default" id="why-mo" class="mo-why">Why?</a></li>
+            <li><a href="#dot">DNS over TLS</a></li>
+            <li><a href="#doh">DNS over HTTPS</a></li>
+            <li><a href="#dnscrypt">DNSCrypt</a></li>
+            <li><a href="customfilter.html">Customfilter</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="#readme">Read ME!</a></li>
+          </ul>
+        </div>
+        <a href="index.html" class="btn btn-ghost normal-case font-bold text-2xl rounded-box">dnswarden</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal p-0">
+          <li><a href="#he-default" id="why-de" class="de-why">Why?</a></li>
+          <li><a href="#dot">DNS over TLS</a></li>
+          <li><a href="#doh">DNS over HTTPS</a></li>
+          <li><a href="#dnscrypt">DNSCrypt</a></li>
+          <li><a href="customfilter.html">Customfilter</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="#readme">Read ME!</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+
+        <img class="h-8 w-8 hidden" src="img/icons/notusing.svg" id="nav-notusing" alt=""/>
+        <img class="h-8 w-8 hidden" src="img/icons/using.svg" id="nav-using" alt=""/>
+
+        <img class="h-8 w-8 hidden" src="img/icons/us.svg" id="nav-flag-icons-us" alt=""/>
+        <img class="h-8 w-8 hidden" src="img/icons/fr.svg" id="nav-flag-icons-fr" alt=""/>
+        <img class="h-8 w-8 hidden" src="img/icons/in.svg" id="nav-flag-icons-in" alt=""/>
+        <img class="h-8 w-8 hidden" src="img/icons/sg.svg" id="nav-flag-icons-sg" alt=""/>
+
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+  <a href="#top">
+    <button type="button"
+      class="fixed hidden p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
+      id="btn-back-to-top">
+      <svg data-prefix="fas" class="w-4 h-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path fill="currentColor"
+          d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z">
+        </path>
+      </svg>
+    </button>
+  </a>
+
+
+
+
+  <div data-theme="halloween" class="hidden items-center  mx-auto hero  bg-base-100 " id="he-using">
+    <div class="hero-content text-center">
+      <div class="max-w-md lg:max-w-full">
+        <h1 class="text-2xl font-semibold py-6">You are using dnswarden!</h1>
+
+        <ul role="list" class="marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-800">
+          <li>
+            <div class="flex items-center justify-between bg-blue-200 px-4">
+              <p class="w-3/4">Connected to server at</p>
+              <img class="h-8 w-8 hidden" src="img/icons/us.svg" id="he-flag-icons-us" alt=""/>
+              <img class="h-8 w-8 hidden" src="img/icons/fr.svg" id="he-flag-icons-fr" alt=""/>
+              <img class="h-8 w-8 hidden" src="img/icons/in.svg" id="he-flag-icons-in" alt=""/>
+              <img class="h-8 w-8 hidden " src="img/icons/sg.svg" id="he-flag-icons-sg" alt=""/>
+            </div>
+          </li>
+          <li>
+            <div class="flex justify-between items-center bg-purple-200 px-4">
+              <p class="w-1/2">Protocol</p>
+              <p class="hidden " id="test-dot-proto">DOT</p>
+              <p class="hidden " id="test-doh-proto">DOH</p>
+              <p class="hidden " id="test-dnscrypt-proto">DNSCrypt</p>
+            </div>
+          </li>
+          <li>
+            <div class="flex justify-between items-center bg-blue-200 px-4">
+              <p class="px-0 w-2/3">Type</p>
+              <p class="hidden px-2" id="test-adblock-type">Adblock</p>
+              <p class="hidden px-2 " id="test-adultfilter-type">AdultFilter
+              </p>
+              <p class="hidden px-2" id="test-uncensored-type">Uncensored</p>
+              <p class="hidden px-2" id="test-customfilter-type">CustomFilter
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ 
+ 
+  <div data-theme="acid" class="items-center mx-auto hero md:min-h-screen bg-base-100" id="he-default">
+    <div class="hero-content text-center">
+      <div class="max-w-md lg:max-w-full">
+        <h1 class="text-5xl font-semibold py-6">Try now.</h1>
+        <p class="py-8 font-semibold text-2xl">
+          DnsWarden provides stable and privacy-focused dns resolvers.
+        </p>
+
+        <p class="underline font-semibold py-8">Some features</p>
+
+        <ul role="list" class="marker:text-sky-500 list-disc pl-5 space-y-3 text-slate-800 text-left">
+          <li>NO Logs.</li>
+          <li>
+            Supports multiple protocols like
+            <a href="#dot" class="text-blue-600 visited:text-purple-700">DNS-Over-TLS</a>,
+            <a href="#doh" class="text-blue-600 visited:text-purple-700">DNS-Over-HTTPS</a>
+            and
+            <a href="#dnscrypt" class="text-blue-600 visited:text-purple-700">DNSCrypt</a>.
+          </li>
+          <li>
+            Supports multiple types of dns filters. Like adblock, adultfilter
+            and uncensored.
+          </li>
+          <li>
+            <a href="customfilter.html" class="text-blue-600 visited:text-purple-700">Customfilter</a>, where you can
+            choose to block ads, spyware, malware and
+            trackers.
+          </li>
+          <li>Hosted in multiple locations.</li>
+        </ul>
+        <br /><br /><br /><br />
+        <a href="#dot"><button class="btn text-white animate-bounce ">Get Started</button></a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<div class="container mx-auto items-center justify-center text text-center py-10" id="dot">
+  <p class="font-bold text-5xl">DNS-Over-TLS</p>
+  <div class=" container mx-auto items-center justify-center bg-base-200">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-5">
+        
+        <div class="  text-center rounded-lg border border-black">
+          <p class="text-3xl font-semibold">Adblock</p>
+            <div class="flex px-2 sm:px-4 flex-wrap items-center justify-between py-10">
+              <p class="italic ">adblock.dns.dnswarden.com</p> 
+              <button class="btn btn-sm cbbtn animate-bounce" data-clipboard-text="adblock.dns.dnswarden.com" title="Copy DNS">Copy </button>
+            </div>
+            <p class="py-5">Click on flag icons to copy location specific address.</p>
+            <div class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adblock.fr1.dnswarden.com"><img class="h-8 w-8"src="img/icons/fr.svg" title="France"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adblock.sg1.dnswarden.com"><img class="h-8 w-8"src="img/icons/sg.svg" title="Singapore"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adblock.ind1.dnswarden.com"><img class="h-8 w-8"src="img/icons/in.svg" title="India"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adblock.us1.dnswarden.com"><img class="h-8 w-8"src="img/icons/us.svg" title="USA"/></button>
+            </div>
+        </div>
+
+
+        <div class="  text-center rounded-lg border border-black">
+          <p class="text-3xl font-semibold">Uncensored</p>
+            <div class="flex px-2 sm:px-4 flex-wrap items-center justify-between py-10">
+              <p class="italic ">uncensored.dns.dnswarden.com</p> 
+              <button class="btn btn-sm cbbtn animate-bounce" data-clipboard-text="uncensored.dns.dnswarden.com" title="Copy DNS">Copy </button>
+            </div>
+            <p class="py-5">Click on flag icons to copy location specific address.</p>
+            <div class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="uncensored.fr1.dnswarden.com"><img class="h-8 w-8"src="img/icons/fr.svg" title="France"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="uncensored.sg1.dnswarden.com"><img class="h-8 w-8"src="img/icons/sg.svg" title="Singapore"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="uncensored.ind1.dnswarden.com"><img class="h-8 w-8"src="img/icons/in.svg" title="India"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="uncensored.us1.dnswarden.com"><img class="h-8 w-8"src="img/icons/us.svg" title="USA"/></button>
+            </div>
+        </div>
+
+
+        <div class="  text-center rounded-lg border border-black">
+          <p class="text-3xl font-semibold">Adult-Filter</p>
+            <div class="flex px-2 sm:px-4 flex-wrap items-center justify-between py-10">
+              <p class="italic ">adultfilter.dns.dnswarden.com</p> 
+              <button class="btn btn-sm cbbtn animate-bounce" data-clipboard-text="adultfilter.dns.dnswarden.com" title="Copy DNS">Copy </button>
+            </div>
+            <p class="py-5">Click on flag icons to copy location specific address.</p>
+            <div class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adultfilter.fr1.dnswarden.com"><img class="h-8 w-8"src="img/icons/fr.svg" title="France"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adultfilter.sg1.dnswarden.com"><img class="h-8 w-8"src="img/icons/sg.svg" title="Singapore"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adultfilter.ind1.dnswarden.com"><img class="h-8 w-8"src="img/icons/in.svg" title="India"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adultfilter.us1.dnswarden.com"><img class="h-8 w-8"src="img/icons/us.svg" title="USA"/></button>
+            </div>
+        </div>
+
+
+        <div class=" text-center rounded-lg border border-black">
+          <p class=" py-32 text-2xl font-semibold ">Configure <a href="customfilter.html" class="text-blue-600 visited:text-purple-700 ">here</a> for customfilter.</p>
+        </div>
+
+      </div>
+  </div>
+</div>  
+
+
+
+
+
+
+<div class="container mx-auto items-center justify-center text text-center py-10" id="doh">
+  <p class="font-bold text-5xl">DNS-Over-HTTPS</p>
+  <div class=" container mx-auto items-center justify-center bg-base-200">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-5">
+        
+        <div class="  text-center rounded-lg border border-black">
+          <p class="text-3xl font-semibold">Adblock</p>
+            <div class="flex px-2 sm:px-4 flex-wrap items-center justify-between py-10 ">
+              <a href="https://dns.dnswarden.com/adblock" class="text-blue-600 visited:text-purple-700">dns.dnswarden.com/adblock</a>
+              <button class="btn btn-sm cbbtn animate-bounce" data-clipboard-text="https://dns.dnswarden.com/adblock" title="Copy DNS">Copy </button>
+            </div>
+            <p class="py-5">Click on flag icons to copy location specific address.</p>
+            <div class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://fr1.dnswarden.com/adblock"><img class="h-8 w-8"src="img/icons/fr.svg" title="France"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://sg1.dnswarden.com/adblock"><img class="h-8 w-8"src="img/icons/sg.svg" title="Singapore"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://ind1.dnswarden.com/adblock"><img class="h-8 w-8"src="img/icons/in.svg" title="India"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://us1.dnswarden.com/adblock"><img class="h-8 w-8"src="img/icons/us.svg" title="USA"/></button>
+            </div>
+        </div>
+
+
+        <div class="  text-center rounded-lg border border-black">
+          <p class="text-3xl font-semibold">Uncensored</p>
+            <div class="flex px-2 sm:px-4 flex-wrap items-center justify-between py-10">
+              <a href="https://dns.dnswarden.com/uncensored" class="text-blue-600 visited:text-purple-700">dns.dnswarden.com/uncensored</a>
+              <button class="btn btn-sm cbbtn animate-bounce" data-clipboard-text="https://dns.dnswarden.com/uncensored" title="Copy DNS">Copy </button>
+            </div>
+            <p class="py-5">Click on flag icons to copy location specific address.</p>
+            <div class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://fr1.dnswarden.com/uncensored"><img class="h-8 w-8"src="img/icons/fr.svg" title="France"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://sg1.dnswarden.com/uncensored"><img class="h-8 w-8"src="img/icons/sg.svg" title="Singapore"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://ind1.dnswarden.com/uncensored"><img class="h-8 w-8"src="img/icons/in.svg" title="India"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://us1.dnswarden.com/uncensored"><img class="h-8 w-8"src="img/icons/us.svg" title="USA"/></button>
+            </div>
+        </div>
+
+
+        <div class="  text-center rounded-lg border border-black">
+          <p class="text-3xl font-semibold">Adult-Filter</p>
+            <div class="flex px-2 sm:px-4 flex-wrap items-center justify-between py-10">
+              <a href="https://dns.dnswarden.com/adultfilter" class="text-blue-600 visited:text-purple-700">dns.dnswarden.com/adultfilter</a>
+              <button class="btn btn-sm cbbtn animate-bounce" data-clipboard-text="https://dns.dnswarden.com/adultfilter" title="Copy DNS">Copy </button>
+            </div>
+            <p class="py-5">Click on flag icons to copy location specific address.</p>
+            <div class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://fr1.dnswarden.com/adultfilter"><img class="h-8 w-8"src="img/icons/fr.svg" title="France"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://sg1.dnswarden.com/adultfilter"><img class="h-8 w-8"src="img/icons/sg.svg" title="Singapore"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://ind1.dnswarden.com/adultfilter"><img class="h-8 w-8"src="img/icons/in.svg" title="India"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://us1.dnswarden.com/adultfilter"><img class="h-8 w-8"src="img/icons/us.svg" title="USA"/></button>
+            </div>
+        </div>
+
+
+        <div class=" text-center rounded-lg border border-black">
+          <p class=" py-32 text-2xl font-semibold">Configure <a href="customfilter.html" class="text-blue-600 visited:text-purple-700">here</a> for customfilter.</p>
+        </div>
+
+      </div>
+  </div>
+</div>  
+
+
+
+
+
+<div class="container mx-auto items-center justify-center text text-center py-10" id="dnscrypt">
+  <p class="font-bold text-5xl">DNSCrypt</p>
+  <div class=" container mx-auto items-center justify-center bg-base-200">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-5">
+        
+        <div class="  text-center rounded-lg border border-black">
+          <p class="text-3xl font-semibold">Adblock</p>
+
+            <p class="py-5">Click on flag icons to copy location specific stamps.</p>
+            <div class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="sdns://AQMAAAAAAAAAEjE0MS45NS4xNjAuMzg6MTQ0MyBb2ys5hOrqMVXyrUT4kA4waTiPT-6wOM70BK9wQDnsXCEyLmRuc2NyeXB0LWNlcnQuZG5zd2FyZGVuLWFkYmxvY2s"><img class="h-8 w-8"src="img/icons/fr.svg" title="France"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="sdns://AQMAAAAAAAAAEzE1LjIzNS4xNDEuMjA4OjE0NDMgkH4uLCjql6JM6bKO-vmgOnW0kuoLEO3VN8J5-vdF7uUhMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZGJsb2Nr"><img class="h-8 w-8"src="img/icons/sg.svg" title="Singapore"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="sdns://AQMAAAAAAAAAEzE2NS4yMzIuMTg2Ljk1OjE0NDMgLr0BcXSh2_NLrkNA0Uv4OoXFAuMvb4F_TSgLvIkRZR8hMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZGJsb2Nr"><img class="h-8 w-8"src="img/icons/in.svg" title="India"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="sdns://AQMAAAAAAAAAEzE0OS4yOC4yNDQuMTMxOjE0NDMgn9q8wrULNpalR4ThCg7gE1yRhQ4uacOoqXoelOvSXjQhMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZGJsb2Nr"><img class="h-8 w-8"src="img/icons/us.svg" title="USA"/></button>
+            </div>
+        </div>
+
+
+        <div class="  text-center rounded-lg border border-black">
+          <p class="text-3xl font-semibold">Uncensored</p>
+
+            <p class="py-5">Click on flag icons to copy location specific stamps.</p>
+            <div class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="sdns://AQcAAAAAAAAAEjE0MS45NS4xNjAuMzg6NTM1MyBb2ys5hOrqMVXyrUT4kA4waTiPT-6wOM70BK9wQDnsXCQyLmRuc2NyeXB0LWNlcnQuZG5zd2FyZGVuLXVuY2Vuc29yZWQ"><img class="h-8 w-8"src="img/icons/fr.svg" title="France"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="sdns://AQcAAAAAAAAAEzE1LjIzNS4xNDEuMjA4OjUzNTMgkH4uLCjql6JM6bKO-vmgOnW0kuoLEO3VN8J5-vdF7uUkMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi11bmNlbnNvcmVk"><img class="h-8 w-8"src="img/icons/sg.svg" title="Singapore"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="sdns://AQcAAAAAAAAAEzE2NS4yMzIuMTg2Ljk1OjUzNTMgLr0BcXSh2_NLrkNA0Uv4OoXFAuMvb4F_TSgLvIkRZR8kMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi11bmNlbnNvcmVk"><img class="h-8 w-8"src="img/icons/in.svg" title="India"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="sdns://AQcAAAAAAAAAEzE0OS4yOC4yNDQuMTMxOjUzNTMgn9q8wrULNpalR4ThCg7gE1yRhQ4uacOoqXoelOvSXjQkMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi11bmNlbnNvcmVk"><img class="h-8 w-8"src="img/icons/us.svg" title="USA"/></button>
+            </div>
+        </div>
+
+
+        <div class="  text-center rounded-lg border border-black">
+          <p class="text-3xl font-semibold">Adult-Filter</p>
+
+            <p class="py-5">Click on flag icons to copy location specific stamps.</p>
+            <div class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="sdns://AQMAAAAAAAAAEjE0MS45NS4xNjAuMzg6MjA1MyBb2ys5hOrqMVXyrUT4kA4waTiPT-6wOM70BK9wQDnsXB8yLmRuc2NyeXB0LWNlcnQuZG5zd2FyZGVuLWFkdWx0"><img class="h-8 w-8"src="img/icons/fr.svg" title="France"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="sdns://AQMAAAAAAAAAEzE1LjIzNS4xNDEuMjA4OjIwNTMgkH4uLCjql6JM6bKO-vmgOnW0kuoLEO3VN8J5-vdF7uUfMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZHVsdA"><img class="h-8 w-8"src="img/icons/sg.svg" title="Singapore"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="sdns://AQMAAAAAAAAAEzE2NS4yMzIuMTg2Ljk1OjIwNTMgLr0BcXSh2_NLrkNA0Uv4OoXFAuMvb4F_TSgLvIkRZR8fMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZHVsdA"><img class="h-8 w-8"src="img/icons/in.svg" title="India"/></button>
+              <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="sdns://AQMAAAAAAAAAEzE0OS4yOC4yNDQuMTMxOjIwNTMgn9q8wrULNpalR4ThCg7gE1yRhQ4uacOoqXoelOvSXjQfMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZHVsdA"><img class="h-8 w-8"src="img/icons/us.svg" title="USA"/></button>
+            </div>
+        </div>
+
+
+        <div class=" text-center rounded-lg border border-black">
+          <p class=" py-12 text-2xl font-semibold">DNSCrypt has no Customfilter support and sadly it won't even be supported in future.</p>
+        </div>
+
+      </div>
+  </div>
+</div> 
+
+<div class="container mx-auto items-center p-10 bg-base-200" id="readme">
+<h1 class="text-3xl">Privacy policy, ToS and Contact</h1>
+<ul class="list-disc py-8">
+  <li>There are no logs related to DNS service.</li>
+  <li>This website is free of cookies and is hosted by <a href="https://github.com/dnswarden/dnswarden.github.io" class="text-blue-600 visited:text-purple-700">github pages</a>.</li>
+  <li>This is a hobby project which advocates  free for fair usage.</li>
+  <li>You can contact me at <a href="https://github.com/bhanupratapys/dnswarden" class="text-blue-600 visited:text-purple-700">github</a> or <a href="https://t.me/dnswarden" class="text-blue-600 visited:text-purple-700">telegram</a> or <a href="mailto:dns-support@dnswarden.com" class="text-blue-600 visited:text-purple-700">email</a> for whitelisting domains or any issues related to the dns service. </li>
+</ul>
+</div>
+<footer class="footer footer-center p-4 bg-base-300 text-base-content p-2">
+  <div>
+    <p>Copyright © 2022 - All right reserved by dnswarden.</p>
+  </div>
+</footer>
+<script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dnswarden customfilter — Secure and configurable dns</title>
+  <meta name="title" content="dnswarden CustomFilter — secure and configurable dns" />
+  <meta name="description"
+    content="Your one stop dns resolver for safer internet. Lets you configure to block/allow websites or domains through pre-defined blocklists and whitelists. " />
+  <meta name="keywords"
+    content="dnssec,adblock,dns,resolver,dot,doh,dns-over-https,dns-over-tls,no-logs,nologs,adulfilter,adult-filter,uncensored,opennic,adblocking,no-logging,customfilter,custom-filter" />
+  <meta name="robots" content="index, follow" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+  <link rel="manifest" href="img/site.webmanifest" />
+  <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#ffc40d" />
+  <meta name="msapplication-config" content="img/browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff" />
+  <link href="./css/main.css" rel="stylesheet" />
+  
+</head>
+
+<body class="customfilterpage" id="top">
+  <header>
+    <div class="navbar bg-base-300 font-semibold">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="customfilter.html">Customfilter</a></li>
+            <li><a href="search.html">Search</a></li>
+          </ul>
+        </div>
+        <a href="index.html" class="btn btn-ghost normal-case font-bold text-2xl">dnswarden</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal p-0">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="customfilter.html">Customfilter</a></li>
+          <li><a href="search.html">Search</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <img class="h-8 w-8 hidden" src="img/icons/notusing.svg" id="nav-notusing" />
+        <img class="h-8 w-8 hidden" src="img/icons/using.svg" id="nav-using" />
+
+        <img class="h-8 w-8 hidden" src="img/icons/us.svg" id="nav-flag-icons-us" />
+        <img class="h-8 w-8 hidden" src="img/icons/fr.svg" id="nav-flag-icons-fr" />
+        <img class="h-8 w-8 hidden" src="img/icons/in.svg" id="nav-flag-icons-in" />
+        <img class="h-8 w-8 hidden" src="img/icons/sg.svg" id="nav-flag-icons-sg" />
+        
+      </div>
+
+    </div>
+  </header>
+
+  <a href="#top">
+    <button type="button"
+      class="fixed hidden p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
+      id="btn-back-to-top">
+      <svg data-prefix="fas" class="w-4 h-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path fill="currentColor"
+          d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z">
+        </path>
+      </svg>
+    </button>
+  </a>
+
+
+
+
+
+<div data-theme="dracula" class=" items-center hero  bg-base-100 " >
+  <div class="hero-content text-center">
+    <div class="max-w-md lg:max-w-full m-4 ">
+        <ul class="list-disc marker:text-blue-400 text-left ">
+         <li>Only choose which lists you require.</li>
+         <li>Whitelists take precedence over normal and wildcard lists.</li>
+         <li>Choosing too many wildcard lists will have a negative effect on your browsing.</li>
+         <li>Click on flag icons to get the location specific address or click on bouncy copy icon to get the address which takes you to the closest working server and has benefits during downtime.</li>
+       </ul>  
+    </div>
+  </div>
+</div>
+
+
+<div class="container mx-auto items-center py-10 ">
+
+  
+    <div class="border border-black bg-base-200">
+      <h1 class="text-center font-bold text-3xl p-8">DNS-Over-HTTPS</h1>
+        <div class="flex grid grid-cols-1 md:grid-cols-2 ">
+            <div class="flex container mx-auto  gap-2 p-4 items-center justify-between ">
+              <textarea id="doh-global" class=" textarea textarea-primary w-full font-medium" placeholder="https://dns.dnswarden.com/uncensored" readonly></textarea>
+            </div>
+            <div class="flex container mx-auto  gap-2 p-4 items-center justify-between">
+              <button class="btn btn-sm cbbtn animate-bounce" data-clipboard-target="#doh-global" title="Copy DNS">Copy </button>
+              <button id="doh-fr1" class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://fr1.dnswarden.com/uncensored"><img class="h-8 w-8"src="img/icons/fr.svg" title="France"/></button>
+              <button id="doh-sg1" class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://sg1.dnswarden.com/uncensored"><img class="h-8 w-8"src="img/icons/sg.svg" title="Singapore"/></button>
+              <button id="doh-ind1" class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://ind1.dnswarden.com/uncensored"><img class="h-8 w-8"src="img/icons/in.svg" title="India"/></button>
+              <button id="doh-us1" class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://us1.dnswarden.com/uncensored"><img class="h-8 w-8"src="img/icons/us.svg" title="USA"/></button>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="divider"></div> 
+
+
+    <div class="border border-black bg-base-200">
+      <h1 class="text-center font-bold text-3xl p-8">DNS-Over-TLS</h1>
+        <div class="flex grid grid-cols-1 md:grid-cols-2 ">
+            <div class="flex container mx-auto  gap-2 p-4 items-center justify-between ">
+              <textarea id="dot-global" class=" textarea textarea-primary w-full font-medium" placeholder="uncensored.dns.dnswarden.com" readonly></textarea>
+            </div>
+            <div class="flex container mx-auto  gap-2 p-4 items-center justify-between">
+              <button class="btn btn-sm cbbtn animate-bounce" data-clipboard-target="#dot-global" title="Copy DNS">Copy </button>
+              <button id="dot-fr1" class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="uncensored.fr1.dnswarden.com"><img class="h-8 w-8"src="img/icons/fr.svg" title="France"/></button>
+              <button id="dot-sg1" class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="uncensored.sg1.dnswarden.com"><img class="h-8 w-8"src="img/icons/sg.svg" title="Singapore"/></button>
+              <button id="dot-ind1" class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="uncensored.ind1.dnswarden.com"><img class="h-8 w-8"src="img/icons/in.svg" title="India"/></button>
+              <button id="dot-us1" class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="uncensored.us1.dnswarden.com"><img class="h-8 w-8"src="img/icons/us.svg" title="USA"/></button>
+          </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="bg-base-100 items-center justify-center overflow-hidden container mx-auto border border-black " id="customfiltertable">
+<div id="customfilterdata">
+
+</div>
+</div>
+
+<footer class="footer footer-center p-4 bg-base-300 text-base-content p-2">
+  <div>
+    <p>Copyright © 2022 - All right reserved by dnswarden.</p>
+  </div>
+</footer>
+
+<script src="./js/main.js"></script>
+</body>
+
+</html>
