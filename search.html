@@ -77,21 +77,74 @@
     </button>
   </a>
 
-  
 
-  <div class="hero min-h-screen bg-base-200">
+
+  <div class="hero min-h-fit bg-base-200 p-10 mx-auto">
     <div class="hero-content text-center">
-      <div class="max-w-md">
-        <h1 class="text-5xl font-bold">Coming Soon!</h1>
+      <div class="max-w-full">
+        <h1 class="text-3xl font-bold">Search a domain in blocklists and whitelists</h1>
       </div>
     </div>
   </div>
 
-  <footer class="footer footer-center p-4 bg-base-300 text-base-content p-2">
+
+
+  <div class="flex items-center container mx-auto justify-center py-12 gap-4 ">
+    <input type="text" placeholder="Enter a domain name"
+      class="font-semibold input input-bordered input-info w-full max-w-full gap-6" id="domainentered" />
+    <button class="btn btn-md btn-primary" id="searchbutton">Search</button>
+  </div>
+
+
+  <div class="container mx-auto gap-2 items-center justify-between ">
+
+
+    <progress class="hidden progress w-full" id="searching"></progress>
+
+
+    <div class="hidden alert bg-red-200 shadow-lg" id="validdomaincheck">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span class="font-bold">Error! Enter a valid domain name.</span>
+      </div>
+    </div>
+
+    <div class="hidden alert bg-red-200 shadow-lg" id="apidown">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span class="font-bold">Error! Try again later.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container mx-auto">
+    <p class="text-center text-2xl font-medium py-6" id="entereddomainname"></p>
+
+    <div class="bg-base-100 items-center justify-center overflow-hidden container mx-auto border border-black ">
+      <div id="searchtable"></div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <footer class="footer footer-center p-4 bg-base-300 text-base-content p-2 ">
     <div>
       <p>Copyright © 2022 - All right reserved by dnswarden.</p>
     </div>
   </footer>
   <script src="./js/main.js"></script>
 </body>
+
 </html>
