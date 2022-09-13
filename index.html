@@ -62,11 +62,6 @@
       <div class="navbar-end">
         <img class="h-8 w-8 hidden" src="img/icons/notusing.svg" id="nav-notusing" alt="" />
         <img class="h-8 w-8 hidden" src="img/icons/using.svg" id="nav-using" alt="" />
-
-        <img class="h-8 w-8 hidden" src="img/icons/us.svg" id="nav-flag-icons-us" alt="" />
-        <img class="h-8 w-8 hidden" src="img/icons/fr.svg" id="nav-flag-icons-fr" alt="" />
-        <img class="h-8 w-8 hidden" src="img/icons/in.svg" id="nav-flag-icons-in" alt="" />
-        <img class="h-8 w-8 hidden" src="img/icons/sg.svg" id="nav-flag-icons-sg" alt="" />
       </div>
     </div>
   </header>
@@ -83,46 +78,7 @@
     </button>
   </a>
 
-  <div data-theme="halloween" class="hidden items-center mx-auto hero bg-base-100" id="he-using">
-    <div class="hero-content text-center">
-      <div class="max-w-md lg:max-w-full">
-        <h1 class="text-2xl font-semibold py-6">You are using dnswarden!</h1>
 
-        <ul role="list" class="marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-800">
-          <li>
-            <div class="flex items-center justify-between bg-blue-200 px-4">
-              <p class="w-3/4">Connected to server at</p>
-              <img class="h-8 w-8 hidden" src="img/icons/us.svg" id="he-flag-icons-us" alt="" />
-              <img class="h-8 w-8 hidden" src="img/icons/fr.svg" id="he-flag-icons-fr" alt="" />
-              <img class="h-8 w-8 hidden" src="img/icons/in.svg" id="he-flag-icons-in" alt="" />
-              <img class="h-8 w-8 hidden" src="img/icons/sg.svg" id="he-flag-icons-sg" alt="" />
-            </div>
-          </li>
-          <li>
-            <div class="flex justify-between items-center bg-purple-200 px-4">
-              <p class="w-1/2">Protocol</p>
-              <p class="hidden" id="test-dot-proto">DOT</p>
-              <p class="hidden" id="test-doh-proto">DOH</p>
-              <p class="hidden" id="test-dnscrypt-proto">DNSCrypt</p>
-            </div>
-          </li>
-          <li>
-            <div class="flex justify-between items-center bg-blue-200 px-4">
-              <p class="px-0 w-2/3">Type</p>
-              <p class="hidden px-2" id="test-adblock-type">Adblock</p>
-              <p class="hidden px-2" id="test-adultfilter-type">
-                AdultFilter
-              </p>
-              <p class="hidden px-2" id="test-uncensored-type">Uncensored</p>
-              <p class="hidden px-2" id="test-customfilter-type">
-                CustomFilter
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
   <div data-theme="acid" class="items-center mx-auto hero md:min-h-screen bg-base-100" id="he-default">
     <div class="hero-content text-center">
@@ -171,94 +127,43 @@
     <div class="container mx-auto items-center justify-center bg-base-200">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-5">
         <div class="text-center rounded-lg border border-black">
-          <p class="text-3xl font-semibold">Adblock</p>
+          <p class="py-6 text-3xl font-semibold">Adblock</p>
           <div class="flex px-2 sm:px-4 flex-wrap items-center justify-between py-10">
-            <p class="italic">adblock.dns.dnswarden.com</p>
+            <p class="italic font-semibold">adblock.dns.dnswarden.com</p>
             <button class="btn btn-sm cbbtn animate-bounce" data-clipboard-text="adblock.dns.dnswarden.com"
               title="Copy DNS">
               Copy
             </button>
           </div>
-          <p class="py-5">
-            Click on flag icons to copy location specific address.
-          </p>
-          <div
-            class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adblock.fr1.dnswarden.com">
-              <img class="h-8 w-8" src="img/icons/fr.svg" title="France" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adblock.sg1.dnswarden.com">
-              <img class="h-8 w-8" src="img/icons/sg.svg" title="Singapore" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adblock.ind1.dnswarden.com">
-              <img class="h-8 w-8" src="img/icons/in.svg" title="India" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adblock.us1.dnswarden.com">
-              <img class="h-8 w-8" src="img/icons/us.svg" title="USA" />
-            </button>
-          </div>
+
         </div>
 
         <div class="text-center rounded-lg border border-black">
-          <p class="text-3xl font-semibold">Uncensored</p>
+          <p class="py-6 text-3xl font-semibold">Uncensored</p>
           <div class="flex px-2 sm:px-4 flex-wrap items-center justify-between py-10">
-            <p class="italic">uncensored.dns.dnswarden.com</p>
+            <p class="italic font-semibold">uncensored.dns.dnswarden.com</p>
             <button class="btn btn-sm cbbtn animate-bounce" data-clipboard-text="uncensored.dns.dnswarden.com"
               title="Copy DNS">
               Copy
             </button>
           </div>
-          <p class="py-5">
-            Click on flag icons to copy location specific address.
-          </p>
-          <div
-            class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="uncensored.fr1.dnswarden.com">
-              <img class="h-8 w-8" src="img/icons/fr.svg" title="France" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="uncensored.sg1.dnswarden.com">
-              <img class="h-8 w-8" src="img/icons/sg.svg" title="Singapore" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="uncensored.ind1.dnswarden.com">
-              <img class="h-8 w-8" src="img/icons/in.svg" title="India" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="uncensored.us1.dnswarden.com">
-              <img class="h-8 w-8" src="img/icons/us.svg" title="USA" />
-            </button>
-          </div>
+
         </div>
 
         <div class="text-center rounded-lg border border-black">
-          <p class="text-3xl font-semibold">Adult-Filter</p>
+          <p class="py-6 text-3xl font-semibold">Adult-Filter</p>
           <div class="flex px-2 sm:px-4 flex-wrap items-center justify-between py-10">
-            <p class="italic">adultfilter.dns.dnswarden.com</p>
+            <p class="italic font-semibold">adultfilter.dns.dnswarden.com</p>
             <button class="btn btn-sm cbbtn animate-bounce" data-clipboard-text="adultfilter.dns.dnswarden.com"
               title="Copy DNS">
               Copy
             </button>
           </div>
-          <p class="py-5">
-            Click on flag icons to copy location specific address.
-          </p>
-          <div
-            class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adultfilter.fr1.dnswarden.com">
-              <img class="h-8 w-8" src="img/icons/fr.svg" title="France" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adultfilter.sg1.dnswarden.com">
-              <img class="h-8 w-8" src="img/icons/sg.svg" title="Singapore" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adultfilter.ind1.dnswarden.com">
-              <img class="h-8 w-8" src="img/icons/in.svg" title="India" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="adultfilter.us1.dnswarden.com">
-              <img class="h-8 w-8" src="img/icons/us.svg" title="USA" />
-            </button>
-          </div>
+
         </div>
 
         <div class="text-center rounded-lg border border-black">
-          <p class="py-32 text-2xl font-semibold">
+          <p class="py-16 text-2xl font-semibold">
             Configure
             <a href="customfilter.html" class="text-blue-600 visited:text-purple-700">here</a>
             for customfilter.
@@ -273,97 +178,44 @@
     <div class="container mx-auto items-center justify-center bg-base-200">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-5">
         <div class="text-center rounded-lg border border-black">
-          <p class="text-3xl font-semibold">Adblock</p>
-          <div class="flex px-2 sm:px-4 flex-wrap items-center justify-between py-10">
+          <p class="py-6 text-3xl font-semibold">Adblock</p>
+          <div class="flex px-2 sm:px-4 flex-wrap items-center justify-between py-8">
             <a href="https://dns.dnswarden.com/adblock"
-              class="text-blue-600 visited:text-purple-700">dns.dnswarden.com/adblock</a>
+              class="text-blue-600 visited:text-purple-700 font-semibold">dns.dnswarden.com/adblock</a>
             <button class="btn btn-sm cbbtn animate-bounce" data-clipboard-text="https://dns.dnswarden.com/adblock"
               title="Copy DNS">
               Copy
             </button>
           </div>
-          <p class="py-5">
-            Click on flag icons to copy location specific address.
-          </p>
-          <div
-            class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://fr1.dnswarden.com/adblock">
-              <img class="h-8 w-8" src="img/icons/fr.svg" title="France" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://sg1.dnswarden.com/adblock">
-              <img class="h-8 w-8" src="img/icons/sg.svg" title="Singapore" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://ind1.dnswarden.com/adblock">
-              <img class="h-8 w-8" src="img/icons/in.svg" title="India" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://us1.dnswarden.com/adblock">
-              <img class="h-8 w-8" src="img/icons/us.svg" title="USA" />
-            </button>
-          </div>
+
         </div>
 
         <div class="text-center rounded-lg border border-black">
-          <p class="text-3xl font-semibold">Uncensored</p>
-          <div class="flex sm:px-4 flex-wrap items-center justify-between py-10">
+          <p class="py-6 text-3xl font-semibold">Uncensored</p>
+          <div class="flex sm:px-4 flex-wrap items-center justify-between py-8">
             <a href="https://dns.dnswarden.com/uncensored"
-              class="text-blue-600 visited:text-purple-700">dns.dnswarden.com/uncensored</a>
+              class="text-blue-600 visited:text-purple-700 font-semibold">dns.dnswarden.com/uncensored</a>
             <button class="btn btn-sm cbbtn animate-bounce" data-clipboard-text="https://dns.dnswarden.com/uncensored"
               title="Copy DNS">
               Copy
             </button>
           </div>
-          <p class="py-5">
-            Click on flag icons to copy location specific address.
-          </p>
-          <div
-            class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://fr1.dnswarden.com/uncensored">
-              <img class="h-8 w-8" src="img/icons/fr.svg" title="France" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://sg1.dnswarden.com/uncensored">
-              <img class="h-8 w-8" src="img/icons/sg.svg" title="Singapore" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://ind1.dnswarden.com/uncensored">
-              <img class="h-8 w-8" src="img/icons/in.svg" title="India" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://us1.dnswarden.com/uncensored">
-              <img class="h-8 w-8" src="img/icons/us.svg" title="USA" />
-            </button>
-          </div>
         </div>
 
         <div class="text-center rounded-lg border border-black">
-          <p class="text-3xl font-semibold">Adult-Filter</p>
-          <div class="flex px-2 sm:px-4 flex-wrap items-center justify-between py-10">
+          <p class="py-6 text-3xl font-semibold">Adult-Filter</p>
+          <div class="flex px-2 sm:px-4 flex-wrap items-center justify-between py-8">
             <a href="https://dns.dnswarden.com/adultfilter"
-              class="text-blue-600 visited:text-purple-700">dns.dnswarden.com/adultfilter</a>
+              class="text-blue-600 visited:text-purple-700 font-semibold">dns.dnswarden.com/adultfilter</a>
             <button class="btn btn-sm cbbtn animate-bounce" data-clipboard-text="https://dns.dnswarden.com/adultfilter"
               title="Copy DNS">
               Copy
             </button>
           </div>
-          <p class="py-5">
-            Click on flag icons to copy location specific address.
-          </p>
-          <div
-            class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://fr1.dnswarden.com/adultfilter">
-              <img class="h-8 w-8" src="img/icons/fr.svg" title="France" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://sg1.dnswarden.com/adultfilter">
-              <img class="h-8 w-8" src="img/icons/sg.svg" title="Singapore" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://ind1.dnswarden.com/adultfilter">
-              <img class="h-8 w-8" src="img/icons/in.svg" title="India" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn" data-clipboard-text="https://us1.dnswarden.com/adultfilter">
-              <img class="h-8 w-8" src="img/icons/us.svg" title="USA" />
-            </button>
-          </div>
         </div>
 
         <div class="text-center rounded-lg border border-black">
-          <p class="py-32 text-2xl font-semibold">
+          <p class="py-16 text-2xl font-semibold">
             Configure
             <a href="customfilter.html" class="text-blue-600 visited:text-purple-700">here</a>
             for customfilter.
@@ -378,91 +230,50 @@
     <div class="container mx-auto items-center justify-center bg-base-200">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-5">
         <div class="text-center rounded-lg border border-black">
-          <p class="text-3xl font-semibold">Adblock</p>
-
-          <p class="py-5">
-            Click on flag icons to copy location specific stamps.
-          </p>
-          <div
-            class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
-            <button class="btn btn-sm bg-base-300 cbbtn"
-              data-clipboard-text="sdns://AQMAAAAAAAAAEjE0MS45NS4xNjAuMzg6MTQ0MyBb2ys5hOrqMVXyrUT4kA4waTiPT-6wOM70BK9wQDnsXCEyLmRuc2NyeXB0LWNlcnQuZG5zd2FyZGVuLWFkYmxvY2s">
-              <img class="h-8 w-8" src="img/icons/fr.svg" title="France" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn"
-              data-clipboard-text="sdns://AQMAAAAAAAAAEzE1LjIzNS4xNDEuMjA4OjE0NDMgkH4uLCjql6JM6bKO-vmgOnW0kuoLEO3VN8J5-vdF7uUhMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZGJsb2Nr">
-              <img class="h-8 w-8" src="img/icons/sg.svg" title="Singapore" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn"
-              data-clipboard-text="sdns://AQMAAAAAAAAAEzE2NS4yMzIuMTg2Ljk1OjE0NDMgLr0BcXSh2_NLrkNA0Uv4OoXFAuMvb4F_TSgLvIkRZR8hMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZGJsb2Nr">
-              <img class="h-8 w-8" src="img/icons/in.svg" title="India" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn"
-              data-clipboard-text="sdns://AQMAAAAAAAAAEzE0OS4yOC4yNDQuMTMxOjE0NDMgn9q8wrULNpalR4ThCg7gE1yRhQ4uacOoqXoelOvSXjQhMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZGJsb2Nr">
-              <img class="h-8 w-8" src="img/icons/us.svg" title="USA" />
-            </button>
-          </div>
+          <p class="text-2xl font-semibold py-2">Hosted in Switzerland</p>
+<div class="py-4">
+          <textarea id="swiss-dc" class=" textarea textarea-primary w-full font-medium"
+          readonly>sdns://AQcAAAAAAAAAFDE4OC4yNDQuMTE3LjExNDoxNDQzIOK0J6XON4YjPmXjlonI5Lx0ZenB5Din7hrX-8uYlDxHKjIuZG5zY3J5cHQtY2VydC5kbnN3YXJkZW4tdW5jZW5zb3JlZC1zd2lzcw</textarea>
+          <button class="btn btn-sm cbbtn animate-pulse" data-clipboard-target="#swiss-dc" title="Copy DNS">Copy
+          </button>
         </div>
+        </div>
+        
 
         <div class="text-center rounded-lg border border-black">
-          <p class="text-3xl font-semibold">Uncensored</p>
-
-          <p class="py-5">
-            Click on flag icons to copy location specific stamps.
-          </p>
-          <div
-            class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
-            <button class="btn btn-sm bg-base-300 cbbtn"
-              data-clipboard-text="sdns://AQcAAAAAAAAAEjE0MS45NS4xNjAuMzg6NTM1MyBb2ys5hOrqMVXyrUT4kA4waTiPT-6wOM70BK9wQDnsXCQyLmRuc2NyeXB0LWNlcnQuZG5zd2FyZGVuLXVuY2Vuc29yZWQ">
-              <img class="h-8 w-8" src="img/icons/fr.svg" title="France" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn"
-              data-clipboard-text="sdns://AQcAAAAAAAAAEzE1LjIzNS4xNDEuMjA4OjUzNTMgkH4uLCjql6JM6bKO-vmgOnW0kuoLEO3VN8J5-vdF7uUkMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi11bmNlbnNvcmVk">
-              <img class="h-8 w-8" src="img/icons/sg.svg" title="Singapore" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn"
-              data-clipboard-text="sdns://AQcAAAAAAAAAEzE2NS4yMzIuMTg2Ljk1OjUzNTMgLr0BcXSh2_NLrkNA0Uv4OoXFAuMvb4F_TSgLvIkRZR8kMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi11bmNlbnNvcmVk">
-              <img class="h-8 w-8" src="img/icons/in.svg" title="India" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn"
-              data-clipboard-text="sdns://AQcAAAAAAAAAEzE0OS4yOC4yNDQuMTMxOjUzNTMgn9q8wrULNpalR4ThCg7gE1yRhQ4uacOoqXoelOvSXjQkMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi11bmNlbnNvcmVk">
-              <img class="h-8 w-8" src="img/icons/us.svg" title="USA" />
-            </button>
-          </div>
+          <p class="text-2xl font-semibold py-2">Experimental anycast server</p>
+<div class="py-4">
+          <textarea id="anycast-dc" class=" textarea textarea-primary w-full font-medium"
+          readonly>sdns://AQcAAAAAAAAAEDEzNy42Ni42LjE0Njo0NDMg4PywrggKWNwrbnACn8kMqpN4PTQKutO6_dOqlQ1lQS4sMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi11bmNlbnNvcmVkLWFueWNhc3Q</textarea>
+          <button class="btn btn-sm cbbtn animate-pulse" data-clipboard-target="#anycast-dc" title="Copy DNS">Copy
+          </button>
+        </div>
         </div>
 
-        <div class="text-center rounded-lg border border-black">
-          <p class="text-3xl font-semibold">Adult-Filter</p>
 
-          <p class="py-5">
-            Click on flag icons to copy location specific stamps.
-          </p>
-          <div
-            class="flex container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4 items-center justify-between">
-            <button class="btn btn-sm bg-base-300 cbbtn"
-              data-clipboard-text="sdns://AQMAAAAAAAAAEjE0MS45NS4xNjAuMzg6MjA1MyBb2ys5hOrqMVXyrUT4kA4waTiPT-6wOM70BK9wQDnsXB8yLmRuc2NyeXB0LWNlcnQuZG5zd2FyZGVuLWFkdWx0">
-              <img class="h-8 w-8" src="img/icons/fr.svg" title="France" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn"
-              data-clipboard-text="sdns://AQMAAAAAAAAAEzE1LjIzNS4xNDEuMjA4OjIwNTMgkH4uLCjql6JM6bKO-vmgOnW0kuoLEO3VN8J5-vdF7uUfMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZHVsdA">
-              <img class="h-8 w-8" src="img/icons/sg.svg" title="Singapore" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn"
-              data-clipboard-text="sdns://AQMAAAAAAAAAEzE2NS4yMzIuMTg2Ljk1OjIwNTMgLr0BcXSh2_NLrkNA0Uv4OoXFAuMvb4F_TSgLvIkRZR8fMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZHVsdA">
-              <img class="h-8 w-8" src="img/icons/in.svg" title="India" />
-            </button>
-            <button class="btn btn-sm bg-base-300 cbbtn"
-              data-clipboard-text="sdns://AQMAAAAAAAAAEzE0OS4yOC4yNDQuMTMxOjIwNTMgn9q8wrULNpalR4ThCg7gE1yRhQ4uacOoqXoelOvSXjQfMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZHVsdA">
-              <img class="h-8 w-8" src="img/icons/us.svg" title="USA" />
-            </button>
-          </div>
+
+        <div class="text-center rounded-lg border border-black">
+          <p class="text-2xl font-semibold py-2">Relay</p>
+<div class="py-4">
+          <textarea id="relay-dc" class=" textarea textarea-primary w-full font-medium"
+          readonly>sdns://gRQxODguMjQ0LjExNy4xMTQ6MTQ0Mw</textarea>
+          <button class="btn btn-sm cbbtn animate-pulse" data-clipboard-target="#relay-dc" title="Copy DNS">Copy
+          </button>
+        </div>
         </div>
 
+
+
         <div class="text-center rounded-lg border border-black">
-          <p class="py-12 text-2xl font-semibold">
-            DNSCrypt has no Customfilter support and sadly it won't even be
-            supported in future.
-          </p>
+          <ul class="list font-semibold py-8">
+            <li>
+              - Dnscrypt supports only uncensored dns.
+            </li>
+            <li>
+              - Anycast server is hosted in multiple locations and anonymized dns may not work for this server.
+            </li>
+          </ul>
+          
         </div>
       </div>
     </div>
