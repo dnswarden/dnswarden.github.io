@@ -23,7 +23,6 @@
   <meta name="theme-color" content="#ffffff" />
   <link href="./css/main.css" rel="stylesheet" />
   <link href="./css/toastr.min.css" rel="stylesheet" />
-
 </head>
 
 <body class="searchpage" id="top">
@@ -56,7 +55,6 @@
         <img class="h-8 w-8 hidden" src="img/icons/notusing.svg" id="nav-notusing" />
         <img class="h-8 w-8 hidden" src="img/icons/using.svg" id="nav-using" />
       </div>
-
     </div>
   </header>
 
@@ -72,30 +70,24 @@
     </button>
   </a>
 
-
-
   <div class="hero min-h-fit bg-base-200 p-10 mx-auto">
     <div class="hero-content text-center">
       <div class="max-w-full">
-        <h1 class="text-3xl font-bold">Search a domain in blocklists and whitelists</h1>
+        <h1 class="text-3xl font-bold">
+          Search a domain in blocklists and whitelists
+        </h1>
       </div>
     </div>
   </div>
 
-
-
-  <div class="flex items-center container mx-auto justify-center py-12 gap-4 ">
+  <div class="flex items-center container mx-auto justify-center py-12 gap-4">
     <input type="text" placeholder="Enter a domain name"
       class="font-semibold input input-bordered input-info w-full max-w-full gap-6" id="domainentered" />
     <button class="btn btn-md btn-primary" id="searchbutton">Search</button>
   </div>
 
-
-  <div class="container mx-auto gap-2 items-center justify-between ">
-
-
+  <div class="container mx-auto gap-2 items-center justify-between">
     <progress class="hidden progress w-full" id="searching"></progress>
-
 
     <div class="hidden alert bg-red-200 shadow-lg" id="validdomaincheck">
       <div>
@@ -118,25 +110,19 @@
         <span class="font-bold">Error! Try again later.</span>
       </div>
     </div>
-
   </div>
 
   <div class="container mx-auto">
     <p class="text-center text-2xl font-medium py-6" id="entereddomainname"></p>
 
-    <div class="bg-base-100 items-center justify-center  container mx-auto border border-black ">
+    <div class="bg-base-100 items-center justify-center container mx-auto">
       <div id="searchtable"></div>
     </div>
-
   </div>
 
-
-
-
-
-  <footer class="footer footer-center p-4 bg-base-300 text-base-content p-2 ">
+  <footer class="footer footer-center p-4 bg-base-300 text-base-content">
     <div>
-      <p>Copyright © 2022 - All right reserved by dnswarden.</p>
+      <p>Copyright © 2023 - All right reserved by dnswarden.</p>
     </div>
   </footer>
   <script src="./js/main.js"></script>
