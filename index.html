@@ -10,7 +10,7 @@
   <meta name="description"
     content="Your one stop dns resolver for safer internet. Lets you configure to block/allow websites or domains through pre-defined blocklists and whitelists. " />
   <meta name="keywords"
-    content="dnssec,adblock,dns,resolver,dot,doh,dns-over-https,dns-over-tls,no-logs,nologs,adulfilter,adult-filter,uncensored,opennic,adblocking,no-logging,customfilter,custom-filter,DNSCrypt,dnscrypt-proxy" />
+    content="dnssec,adblock,dns,resolver,doq,dot,doh,dns-over-https,dns-over-quic,dns-over-tls,no-logs,nologs,adulfilter,adult-filter,uncensored,opennic,adblocking,no-logging,customfilter,custom-filter,DNSCrypt,dnscrypt-proxy" />
   <meta name="robots" content="index, follow" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
@@ -38,7 +38,7 @@
           </label>
           <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52">
             <li><a href="#he-default" id="why-mo" class="mo-why">Why?</a></li>
-            <li><a href="#dot">DNS over TLS</a></li>
+            <li><a href="#dot">DNS over TLS/QUIC</a></li>
             <li><a href="#doh">DNS over HTTPS</a></li>
             <li><a href="#dnscrypt">DNSCrypt</a></li>
             <li><a href="customfilter.html">Customfilter</a></li>
@@ -51,7 +51,7 @@
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal p-0">
           <li><a href="#he-default" id="why-de" class="de-why">Why?</a></li>
-          <li><a href="#dot">DNS over TLS</a></li>
+          <li><a href="#dot">DNS over TLS/QUIC</a></li>
           <li><a href="#doh">DNS over HTTPS</a></li>
           <li><a href="#dnscrypt">DNSCrypt</a></li>
           <li><a href="customfilter.html">Customfilter</a></li>
@@ -78,8 +78,6 @@
     </button>
   </a>
 
-
-
   <div data-theme="acid" class="items-center mx-auto hero md:min-h-screen bg-base-100" id="he-default">
     <div class="hero-content text-center">
       <div class="max-w-md lg:max-w-full">
@@ -94,6 +92,7 @@
           <li>NO Logs.</li>
           <li>
             Supports multiple protocols like
+            <a href="#dot" class="text-blue-600 visited:text-purple-700">DNS-Over-QUIC</a>,
             <a href="#dot" class="text-blue-600 visited:text-purple-700">DNS-Over-TLS</a>,
             <a href="#doh" class="text-blue-600 visited:text-purple-700">DNS-Over-HTTPS</a>
             and
@@ -111,11 +110,13 @@
                   d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
               </svg>
               <span
-                class="animate-ping absolute top-0 right-0.5 block h-3 w-3 rounded-full ring-2 ring-red-500 bg-blue-400"></span>
-            </button><a href="customfilter.html"><button class="text-blue-600 visited:text-purple-700 ">Customfilter
-              </button></a>, where you can
-            choose to block ads, spyware, malware and
+                class="animate-ping absolute top-0 right-0.5 block h-3 w-3 rounded-full ring-2 ring-red-500 bg-blue-400"></span></button><a
+              href="customfilter.html"><button class="text-blue-600 visited:text-purple-700">
+                Customfilter
+              </button></a>, where you can choose to block ads, spyware, malware and
             trackers.
+          </li>
+
           <li>
             <a href="search.html" class="text-blue-600 visited:text-purple-700">Search</a>
             to check whether a domain is present in filter list.
@@ -131,7 +132,7 @@
   </div>
 
   <div class="container mx-auto items-center justify-center text text-center py-10" id="dot">
-    <p class="font-bold text-5xl">DNS-Over-TLS</p>
+    <p class="font-bold text-5xl">DNS Over TLS/QUIC</p>
     <div class="container mx-auto items-center justify-center bg-base-200">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-5">
         <div class="text-center rounded-lg border border-black">
@@ -143,7 +144,6 @@
               Copy
             </button>
           </div>
-
         </div>
 
         <div class="text-center rounded-lg border border-black">
@@ -155,7 +155,6 @@
               Copy
             </button>
           </div>
-
         </div>
 
         <div class="text-center rounded-lg border border-black">
@@ -167,7 +166,6 @@
               Copy
             </button>
           </div>
-
         </div>
 
         <div class="text-center rounded-lg border border-black">
@@ -182,7 +180,7 @@
   </div>
 
   <div class="container mx-auto items-center justify-center text text-center py-10" id="doh">
-    <p class="font-bold text-5xl">DNS-Over-HTTPS</p>
+    <p class="font-bold text-5xl">DNS Over HTTPS</p>
     <div class="container mx-auto items-center justify-center bg-base-200">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-5">
         <div class="text-center rounded-lg border border-black">
@@ -195,7 +193,6 @@
               Copy
             </button>
           </div>
-
         </div>
 
         <div class="text-center rounded-lg border border-black">
@@ -240,48 +237,23 @@
         <div class="text-center rounded-lg border border-black">
           <p class="text-2xl font-semibold py-2">Hosted in Switzerland</p>
           <div class="py-4">
-            <textarea id="swiss-dc" class=" textarea textarea-primary w-full font-medium"
-              readonly>sdns://AQcAAAAAAAAAFDE4OC4yNDQuMTE3LjExNDoxNDQzIOK0J6XON4YjPmXjlonI5Lx0ZenB5Din7hrX-8uYlDxHKjIuZG5zY3J5cHQtY2VydC5kbnN3YXJkZW4tdW5jZW5zb3JlZC1zd2lzcw</textarea>
-            <button class="btn btn-sm cbbtn animate-pulse" data-clipboard-target="#swiss-dc" title="Copy DNS">Copy
+            <textarea id="swiss-dc" class="textarea textarea-primary w-full font-medium" readonly>
+sdns://AQcAAAAAAAAAFDE4OC4yNDQuMTE3LjExNDoxNDQzIOK0J6XON4YjPmXjlonI5Lx0ZenB5Din7hrX-8uYlDxHKjIuZG5zY3J5cHQtY2VydC5kbnN3YXJkZW4tdW5jZW5zb3JlZC1zd2lzcw</textarea>
+            <button class="btn btn-sm cbbtn animate-pulse" data-clipboard-target="#swiss-dc" title="Copy DNS">
+              Copy
             </button>
           </div>
         </div>
-
-
-        <div class="text-center rounded-lg border border-black">
-          <p class="text-2xl font-semibold py-2">Experimental anycast server</p>
-          <div class="py-4">
-            <textarea id="anycast-dc" class=" textarea textarea-primary w-full font-medium"
-              readonly>sdns://AQcAAAAAAAAAEDEzNy42Ni42LjE0Njo0NDMg4PywrggKWNwrbnACn8kMqpN4PTQKutO6_dOqlQ1lQS4sMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi11bmNlbnNvcmVkLWFueWNhc3Q</textarea>
-            <button class="btn btn-sm cbbtn animate-pulse" data-clipboard-target="#anycast-dc" title="Copy DNS">Copy
-            </button>
-          </div>
-        </div>
-
-
 
         <div class="text-center rounded-lg border border-black">
           <p class="text-2xl font-semibold py-2">Relay</p>
           <div class="py-4">
-            <textarea id="relay-dc" class=" textarea textarea-primary w-full font-medium"
-              readonly>sdns://gRQxODguMjQ0LjExNy4xMTQ6MTQ0Mw</textarea>
-            <button class="btn btn-sm cbbtn animate-pulse" data-clipboard-target="#relay-dc" title="Copy DNS">Copy
+            <textarea id="relay-dc" class="textarea textarea-primary w-full font-medium" readonly>
+sdns://gRQxODguMjQ0LjExNy4xMTQ6MTQ0Mw</textarea>
+            <button class="btn btn-sm cbbtn animate-pulse" data-clipboard-target="#relay-dc" title="Copy DNS">
+              Copy
             </button>
           </div>
-        </div>
-
-
-
-        <div class="text-center rounded-lg border border-black">
-          <ul class="list font-semibold py-8">
-            <li>
-              - Dnscrypt supports only uncensored dns.
-            </li>
-            <li>
-              - Anycast server is hosted in multiple locations and anonymized dns may not work for this server.
-            </li>
-          </ul>
-
         </div>
       </div>
     </div>
